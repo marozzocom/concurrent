@@ -21,7 +21,7 @@
     "react": "0.0.0-experimental-f6b8d31a7",
     "react-dom": "0.0.0-experimental-f6b8d31a7",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.1-rc",
+    "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }
