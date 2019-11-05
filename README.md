@@ -1,3 +1,6 @@
+# Demo
+See the demo [here](https://marozzocom.github.io/concurrent/).
+
 # Experiment with React SuspenseList and concurrent mode
 This example shows how [SuspenseList](https://reactjs.org/docs/concurrent-mode-reference.html#suspenselist) can be used to control how asynchronically loaded components are rendered.
 
