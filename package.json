@@ -1,7 +1,7 @@
 {
   "name": "concurrent",
   "version": "1.0.0",
-  "description": "",
+  "description": "React concurrent example",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,10 +9,13 @@
     "watch": "webpack --watch --mode development",
     "start": "node app.js"
   },
-  "author": "",
+  "author": "Ilkka Hartikainen",
   "license": "ISC",
   "dependencies": {
+    "@emotion/core": "^10.0.22",
     "@types/node": "^12.12.5",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
     "express": "^4.17.1",
     "react": "0.0.0-experimental-f6b8d31a7",
     "react-dom": "0.0.0-experimental-f6b8d31a7",

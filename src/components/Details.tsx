@@ -1,15 +1,24 @@
-import React from "react"
-import { createResource } from "services/data"
+/** @jsx jsx */
+import React, { Suspense, SuspenseList } from "react"
 import { Number } from "components/Number"
+import { css, jsx } from "@emotion/core"
+import { Spinner } from "components/Spinner"
+import { IResource } from "services/data"
 
-const resource = createResource()
+const style = css({
+  display: "flex",
+  flexWrap: "wrap"
+})
 
-export const Details = () => {
-    const { numbers } = resource
-
-    return <>
-        <Number number={numbers[0].read()} />
-        <Number number={numbers[1].read()} />
-        <Number number={numbers[2].read()} />
-    </>
+export enum RevealOrderType {
+  Forwards = "forwards",
+  Backwards = "backwards",
+  Together = "together"
 }
+export enum TailType {
+  Collapsed = "collapsed",
+  Hidden = "hidden"
+}
+
+// export const Details = () => <SuspenseList revealOrder="forwards">{resource.numbers.map((number, index) => <Suspense key={index} fallback={<div>Loading...</div>}><Number number={number} /></Suspense>)}</SuspenseList>
+export const Details = ({ resource, revealOrder, tail }: { resource: IResource, revealOrder?: RevealOrderType, tail?: TailType }) => <div css={style}><SuspenseList revealOrder={revealOrder} tail={tail}>{resource?.numbers?.map((number, index) => <Suspense key={index} fallback={<Spinner />}><Number number={number} /></Suspense>)}</SuspenseList></div>
