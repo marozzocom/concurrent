@@ -1,5 +1,5 @@
-const getRandomNumber = async (maxDelay: number) => {
-    const number = Math.floor(Math.random() * 100)
+const getNumber = async (previous: number, maxDelay: number) => {
+    const number = previous + 1
     const delay = Math.floor(Math.random() * maxDelay)
     return new Promise(resolve => setTimeout(() => resolve(number), delay))
 }
@@ -14,7 +14,7 @@ export interface IResourceSettings {
   maxDelay: number
 }
 
-export const createResource = (resourceSettings: IResourceSettings) => ({ numbers: [...Array(resourceSettings.length)].map(_ => wrapPromise(getRandomNumber(resourceSettings.maxDelay))) })
+export const createResource = (resourceSettings: IResourceSettings) => ({ numbers: [...Array(resourceSettings.length)].map((_, index) => wrapPromise(getNumber(index, resourceSettings.maxDelay))) })
 
 const wrapPromise = (promise) => {
     let status = "pending"
