@@ -8,7 +8,7 @@ This example renders 30 numbers that take a random time to "load" from zero to f
 
 The showing of spinner is also controlled with React Suspense and it is not part of the actual component displaying the number.
 
-## Installation
+## Install
 1) Install dependencies with `npm i`
 2) Build with `npm run build`
 3) Start server with `npm run start`
