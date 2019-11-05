@@ -1,0 +1,24 @@
+{
+  "name": "concurrent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.12.5",
+    "express": "^4.17.1",
+    "react": "0.0.0-experimental-f6b8d31a7",
+    "react-dom": "0.0.0-experimental-f6b8d31a7",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.1-rc",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
