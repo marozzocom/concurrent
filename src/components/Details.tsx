@@ -20,5 +20,4 @@ export enum TailType {
   Hidden = "hidden"
 }
 
-// export const Details = () => <SuspenseList revealOrder="forwards">{resource.numbers.map((number, index) => <Suspense key={index} fallback={<div>Loading...</div>}><Number number={number} /></Suspense>)}</SuspenseList>
 export const Details = ({ resource, revealOrder, tail }: { resource: IResource, revealOrder?: RevealOrderType, tail?: TailType }) => <div css={style}><SuspenseList revealOrder={revealOrder} tail={tail}>{resource?.numbers?.map((number, index) => <Suspense key={index} fallback={<Spinner />}><Number number={number} /></Suspense>)}</SuspenseList></div>
