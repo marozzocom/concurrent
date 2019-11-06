@@ -30,9 +30,9 @@ const styles = {
 }
 
 export const SuspenseControls = (props: ISuspenseControlsProps) => {
-
   const { setResource, revealOrder, handleRevealOrderChange, handleTailChange } = props
-  const showTailOptions = revealOrder === (RevealOrderType.Forwards || RevealOrderType.Backwards)
+  const showTailOptions = revealOrder === RevealOrderType.Forwards || revealOrder === RevealOrderType.Backwards
+
   return <div css={styles.root}>
     <div css={styles.controls}>
     <button css={styles.control} onClick={() => setResource(undefined)}>Clear</button>
